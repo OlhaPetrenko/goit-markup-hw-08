@@ -1,0 +1,34 @@
+.client-list {
+  @include centeredFlex;
+  @extend %list;
+}
+
+.client-list__item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
+}
+
+.company-link {
+  @include centeredFlex;
+
+  width: 170px;
+  height: 92px;
+  border: 1px solid $icon-color;
+  border-radius: 4px;
+  transition: border-color 250ms $timing-function;
+  &:hover,
+  &:focus {
+    border-color: $accent-color;
+  }
+}
+
+.company-link__icon {
+  fill: $icon-color;
+
+  transition: fill 250ms $timing-function;
+  .company-link:hover &,
+  .company-link:focus & {
+    fill: $accent-color;
+  }
+}

@@ -1,0 +1,11 @@
+.page-title {
+  @extend %visually-hidden;
+}
+
+.section {
+  @extend %section;
+}
+
+.container {
+  @extend %container;
+}

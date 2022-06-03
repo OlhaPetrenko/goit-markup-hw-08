@@ -1,0 +1,12 @@
+.header {
+  border: 1px solid #ececec;
+}
+
+.header__settings {
+  @include centeredFlex(flex, center, space-between);
+  @extend %container;
+}
+
+.header__nav {
+  @include centeredFlex;
+}

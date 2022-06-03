@@ -1,0 +1,29 @@
+/* Футер */
+.footer {
+  background-color: $background-color-footer;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+.footer__settings {
+  @include centeredFlex(flex, baseline, center);
+  @extend %container;
+}
+
+.footer__nav {
+  margin-right: 70px;
+}
+
+.block--right {
+  margin-right: 93px;
+}
+
+.block__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: $primery-background-color;
+  margin-bottom: 20px;
+  margin-top: 0;
+}

@@ -1,0 +1,39 @@
+.contact-nav {
+  @include centeredFlex;
+  @extend %list;
+}
+.contact-nav__item {
+  align-items: center;
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+
+.contact-nav__link {
+  @include centeredFlex;
+  @extend %link;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  justify-content: center;
+  align-items: center;
+  color: $secondary-text-color;
+
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  transition: color 250ms $timing-function;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.contact__icon {
+  margin-right: 10px;
+  fill: $secondary-text-color;
+  transition: fill 250ms $timing-function;
+  .contact-nav__link:hover &,
+  .contact-nav__link:focus & {
+    fill: $accent-color;
+  }
+}

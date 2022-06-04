@@ -11,6 +11,55 @@ img {
   display: block;
 }
 
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+@media screen and (min-width: 1200px) {
+  .section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.section__title {
+  margin-top: 0;
+  margin-bottom: 30px;
+  color: #212121;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+@media screen and (min-width: 480px) {
+  .container {
+    width: 480px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    width: 768px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .container {
+    width: 1200px;
+  }
+  .container .section__title {
+    margin-bottom: 50px;
+  }
+}
+
 .site-nav, .contact-nav, .feature-list, .activvity-list, .team-list, .social-list, .client-list, .contacts__list {
   padding: 0;
   margin: 0;
@@ -19,14 +68,6 @@ img {
 
 .logo, .header__logo, .footer__logo, .site-nav__link, .contact-nav__link, .contacts__link {
   text-decoration: none;
-}
-
-.header__settings, .container, .footer__settings {
-  margin-left: auto;
-  margin-right: auto;
-  width: 1200px;
-  padding-left: 15px;
-  padding-right: 15px;
 }
 
 .hero__button, .subscribe__button, .form__button {
@@ -46,7 +87,7 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.section--feature .section__title {
+.section__title--hidden {
   position: absolute;
   white-space: nowrap;
   width: 1px;
@@ -59,34 +100,58 @@ img {
   margin: -1px;
 }
 
-.section--feature, .section, .section--team {
-  padding-top: 94px;
-  padding-bottom: 94px;
-}
-
-.section__title {
-  margin-top: 0;
-  margin-bottom: 50px;
-  color: #212121;
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-}
-
 .header {
+  position: relative;
   border: 1px solid #ececec;
 }
 
 .header__settings {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
 }
 
 .header__nav {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+}
+
+.header__menu-button {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+}
+
+.header__icon--close {
+  display: none;
+}
+
+.header__menu-button--is-open .header__icon--close {
+  display: block;
+}
+
+.header__menu-button--is-open .header__icon--menu {
+  display: none;
+}
+
+.header__menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  padding: 48px 40px;
+  text-align: center;
+  font-size: 20px;
+  height: 300px;
+}
+
+.header__menu--is-open {
+  display: block;
 }
 
 .logo, .header__logo, .footer__logo {
@@ -117,8 +182,8 @@ img {
 
 .site-nav {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .site-nav__item:not(:last-child) {
@@ -127,8 +192,8 @@ img {
 
 .site-nav__link {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   justify-content: center;
@@ -164,8 +229,8 @@ img {
 
 .contact-nav {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .contact-nav__item {
@@ -178,8 +243,8 @@ img {
 
 .contact-nav__link {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding-top: 32px;
   padding-bottom: 32px;
   justify-content: center;
@@ -246,24 +311,41 @@ img {
   padding-bottom: 0;
 }
 
-.feature-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (min-width: 768px) {
+  .feature-list {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
 }
 
-.feature-list__item {
-  width: calc((100%-90px) / 4);
+@media screen and (min-width: 768px) {
+  .feature-list__item {
+    flex-basis: calc((100%-60px) / 2);
+    flex-basis: 354px;
+    margin: 15px;
+  }
 }
 
-.feature-list__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (min-width: 1200px) {
+  .feature-list__item {
+    width: calc((100%-120px) / 4);
+    flex-basis: 270px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .feature-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .feature-list__icon {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   background-color: #f5f4fa;
   height: 120px;
   margin-bottom: 30px;
@@ -285,18 +367,24 @@ img {
   line-height: 1.71;
 }
 
+@media screen and (max-width: 1199px) {
+  .activvity {
+    display: none;
+  }
+}
+
 .activvity-list {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .activvity-list__item {
   position: relative;
-}
-
-.activvity-list__item:not(:last-child) {
-  margin-right: 30px;
+  margin-right: 15px;
+  margin-left: 15px;
 }
 
 .activvity-list__text {
@@ -320,27 +408,48 @@ img {
   background-color: #f5f4fa;
 }
 
+@media screen and (min-width: 768px) {
+  .team-list {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
 .team-list__item {
-  width: calc((100%-90px) / 4);
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
-  background-color: #ffffff;
 }
 
-.team-list__item:not(:last-child) {
-  margin-right: 30px;
+@media screen and (max-width: 767px) {
+  .team-list__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
-.team-list {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+@media screen and (min-width: 768px) {
+  .team-list__item {
+    flex-basis: calc((100%-60px) / 2);
+    flex-basis: 354px;
+    margin: 15px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-list__item {
+    flex-basis: calc((100%-120px) / 4);
+    flex-basis: 270px;
+    margin: 15px;
+  }
 }
 
 .team-member__descr {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
+  background-color: #ffffff;
 }
 
 .team-member__title {
@@ -361,19 +470,22 @@ img {
 
 .social-list {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   padding-bottom: 0;
+  margin-right: -5px;
+  margin-left: -5px;
 }
 
-.social-list__item:not(:last-child) {
-  margin-right: 10px;
+.social-list__item {
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .social-list__link {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
@@ -405,19 +517,36 @@ img {
 
 .client-list {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: -15px;
 }
 
-.client-list__item:not(:last-child) {
-  margin-right: 30px;
+.client-list__item {
+  margin: 15px;
+  flex-basis: calc((100%-60px) / 2);
+  flex-basis: 210px;
+}
+
+@media screen and (min-width: 768px) {
+  .client-list__item {
+    flex-basis: calc((100%-90px) / 3);
+    flex-basis: 226px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .client-list__item {
+    flex-basis: calc((100%-180px) / 6);
+    flex-basis: 170px;
+  }
 }
 
 .company-link {
   display: flex;
-  align-items: center;
   justify-content: center;
-  width: 170px;
+  align-items: center;
   height: 92px;
   border: 1px solid #afb1b8;
   border-radius: 4px;
@@ -447,8 +576,8 @@ img {
 
 .footer__settings {
   display: flex;
-  align-items: baseline;
-  justify-content: center;
+  justify-content: baseline;
+  align-items: center;
 }
 
 .footer__nav {
@@ -490,8 +619,8 @@ img {
 
 .subscribe {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .subscribe__input {
@@ -514,8 +643,8 @@ img {
 
 .subscribe__button {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 
 .subscribe__icon {
@@ -568,8 +697,8 @@ img {
 
 .modal__button {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   position: fixed;
   top: 8px;
   right: 8px;
@@ -666,8 +795,8 @@ img {
 
 .form__agreement {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   flex-direction: row;
   margin-bottom: 30px;
 }

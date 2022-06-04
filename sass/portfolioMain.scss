@@ -1,15 +1,18 @@
+// Utils
 @import './utils/vars';
-
-@import './base/set';
+@import './base/common';
 @import './utils/placeholder';
 @import './utils/mixin';
+// Header
 @import './components/header';
 @import './components/logo';
 @import './components/siteNav';
 @import './components/contactNav';
+// Sections
 @import './components/portfolio';
 @import './components/portfolioBtn';
 @import './components/portfolioCards';
+// Footer
 @import './components/footer';
 @import './components/socialLink';
 @import './components/footerNav';

@@ -2,10 +2,13 @@
   @include centeredFlex;
   @extend %list;
   padding-bottom: 0;
+  margin-right: -5px;
+  margin-left: -5px;
 }
 
-.social-list__item:not(:last-child) {
-  margin-right: 10px;
+.social-list__item {
+  margin-right: 5px;
+  margin-left: 5px;
 }
 
 .social-list__link {

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>homework07</title>
+    <title>homework08</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
@@ -57,6 +57,22 @@
             >
           </li>
         </ul>
+
+        <button
+          type="button"
+          class="header__menu-button header__menu-button--is-open"
+          aria-expanded="true"
+          aria-controls="header__menu"
+          data-menu-button
+        >
+          <svg width="40" height="40" aria-label="Переключатель мобильного меню">
+            <use href="./images/icons.svg#icon-close_40px" class="header__icon--close"></use>
+            <use href="./images/icons.svg#icon-menu_40px" class="header__icon--menu"></use>
+          </svg>
+        </button>
+
+        <div id="header__menu" class="header__menu header__menu--is-open" data-menu></div>
+        Мобильное меню
       </div>
     </header>
 
@@ -70,9 +86,9 @@
       </section>
 
       <!-- Преимущества -->
-      <section class="section--feature">
+      <section class="section section--feature">
         <div class="container">
-          <h2 class="section__title visually-hidden">Преимущества</h2>
+          <h2 class="section__title--hidden">Преимущества</h2>
           <ul class="feature-list flex list">
             <li class="feature-list__item">
               <div class="feature-list__icon flex">
@@ -123,7 +139,7 @@
       </section>
 
       <!-- Чем мы занимаемся -->
-      <section class="section">
+      <section class="section activvity">
         <div class="container">
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="activvity-list flex list">
@@ -445,6 +461,7 @@
         </form>
       </div>
     </footer>
+
     <!-- Модальное окно -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
@@ -454,6 +471,7 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+
         <!--Форма  -->
         <form class="form">
           <div class="form__field flex">
@@ -517,6 +535,7 @@
         </form>
       </div>
       <script src="./js/modal.js"></script>
+      <script src="./js/mobile-menu.js"></script>
     </div>
   </body>
 </html>

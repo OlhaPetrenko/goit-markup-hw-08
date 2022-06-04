@@ -7,7 +7,6 @@
 
 .footer__settings {
   @include centeredFlex(flex, baseline, center);
-  @extend %container;
 }
 
 .footer__nav {

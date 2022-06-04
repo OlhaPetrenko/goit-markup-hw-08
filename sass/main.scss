@@ -1,6 +1,6 @@
 // Utils
 @import './utils/vars';
-@import './base/reset';
+@import './base/common';
 @import './utils/placeholder';
 @import './utils/mixin';
 // Header
@@ -12,7 +12,8 @@
 @import './components/hero';
 @import './components/feature';
 @import './components/activvity';
-@import './components/_team';
+@import './components/team';
+@import './components/socialLink';
 @import './components/client';
 // Footer
 @import './components/footer';

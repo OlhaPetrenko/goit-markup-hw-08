@@ -1,39 +1,102 @@
 .contact-nav {
-  @include centeredFlex;
   @extend %list;
+  @media screen and (max-width: 767px) {
+    margin-bottom: 64px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include centeredFlex;
+  }
 }
 .contact-nav__item {
-  align-items: center;
+  // text-align: start;
+
   &:not(:last-child) {
-    margin-right: 50px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 32px;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-right: 50px;
+      margin-bottom: 0;
+    }
   }
 }
 
 .contact-nav__link {
-  @include centeredFlex;
   @extend %link;
-  padding-top: 32px;
-  padding-bottom: 32px;
-  justify-content: center;
-  align-items: center;
+  @media screen and (max-width: 767px) {
+    font-size: 24px;
+    line-height: 1.17;
+  }
   color: $secondary-text-color;
-
   font-weight: 500;
+  font-size: 12px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color 250ms $timing-function;
+
   &:hover,
   &:focus {
     color: $accent-color;
   }
+
+  @media screen and (min-width: $tablet) {
+    @include centeredFlex(flex, left, center);
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
+}
+
+.contact-nav__link--blue {
+  @media screen and (max-width: 767px) {
+    // @extend .contact-nav__link;
+    color: $accent-color;
+    font-size: 34px;
+    line-height: 1.18;
+    // margin-bottom: 32px;
+  }
 }
 
 .contact__icon {
-  margin-right: 10px;
+  @media screen and (max-width: 767px) {
+    display: none;
+  }
+  margin-right: 8px;
   fill: $secondary-text-color;
   transition: fill 250ms $timing-function;
   .contact-nav__link:hover &,
   .contact-nav__link:focus & {
     fill: $accent-color;
   }
+  @media screen and (min-width: $desktop) {
+    margin-right: 10px;
+  }
+}
+
+.header-social-list {
+  @extend %link;
+  @extend %list;
+  @include centeredFlex;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}
+.header-social-list__item {
+  &:not(:last-child) {
+    margin-right: 15px;
+  }
+}
+.header-social-list__link {
+  @extend %link;
+  color: $accent-color;
 }

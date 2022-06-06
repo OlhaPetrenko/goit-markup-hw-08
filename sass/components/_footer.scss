@@ -1,4 +1,32 @@
 /* Футер */
+// .footer {
+//   background-color: $background-color-footer;
+//   padding-top: 60px;
+//   padding-bottom: 60px;
+// }
+
+// .footer__settings {
+//   @include centeredFlex(flex, baseline, center);
+// }
+
+// .footer__nav {
+//   margin-right: 70px;
+// }
+
+// .block--right {
+//   margin-right: 93px;
+// }
+
+// .block__title {
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: 1.14;
+//   text-transform: uppercase;
+//   color: $primery-background-color;
+//   margin-bottom: 20px;
+//   margin-top: 0;
+// }
+
 .footer {
   background-color: $background-color-footer;
   padding-top: 60px;
@@ -6,15 +34,36 @@
 }
 
 .footer__settings {
-  @include centeredFlex(flex, baseline, center);
-}
+  text-align: center;
 
+  @media screen and (min-width: $tablet) {
+    @include centeredFlex;
+    flex-wrap: wrap;
+  }
+
+  @media screen and (min-width: $desktop) {
+    @include centeredFlex(flex, center, baseline);
+  }
+}
 .footer__nav {
-  margin-right: 70px;
+  @media screen and (min-width: $tablet) {
+    margin-right: 165px;
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 70px;
+    margin-bottom: 0px;
+  }
 }
 
 .block--right {
-  margin-right: 93px;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    margin-right: 93px;
+    margin-bottom: 0px;
+  }
 }
 
 .block__title {

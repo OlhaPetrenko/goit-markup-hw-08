@@ -1,16 +1,53 @@
+// .logo {
+//   @extend %link;
+//   font-family: $secondary-font-family, sans-serif;
+//   font-weight: 700;
+//   font-size: 26px;
+//   line-height: 1.19;
+// }
+// .header__logo {
+//   @extend .logo;
+//   padding-top: 24px;
+//   padding-bottom: 25px;
+//   margin-right: 93px;
+//   color: $studio-in-heder;
+// }
+
+// .logo__accent {
+//   color: $accent-color;
+// }
+// .footer__logo {
+//   @extend .logo;
+//   display: block;
+//   padding: 0;
+//   margin-right: 0;
+//   margin-bottom: 20px;
+//   color: $primery-background-color;
+// }
+
 .logo {
   @extend %link;
-  font-family: $secondary-font-family, sans-serif;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+
+  @media screen and (min-width: $tablet) {
+    font-family: $secondary-font-family, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+  }
+
+  @media screen and (min-width: $desktop) {
+    font-family: $secondary-font-family, sans-serif;
+  }
 }
+
 .header__logo {
   @extend .logo;
-  padding-top: 24px;
-  padding-bottom: 25px;
-  margin-right: 93px;
+  padding: 10px 0;
   color: $studio-in-heder;
+
+  @media screen and (min-width: $tablet) {
+    margin-right: 88px;
+  }
 }
 
 .logo__accent {

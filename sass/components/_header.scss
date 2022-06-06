@@ -1,14 +1,15 @@
 .header {
   position: relative;
+
   border: 1px solid #ececec;
 }
 
 .header__settings {
-  @include centeredFlex(flex, space-between, center);
+  // @include centeredFlex(flex, space-between, center);
 }
 
 .header__nav {
-  @include centeredFlex;
+  @include centeredFlex(flex, space-between, center);
 }
 
 .header__menu-button {
@@ -17,7 +18,12 @@
   padding: 0;
   border: none;
   background-color: transparent;
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
 }
+
 .header__icon--close {
   display: none;
 }
@@ -29,20 +35,28 @@
 .header__menu-button--is-open .header__icon--menu {
   display: none;
 }
+
 .header__menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
   background-color: $primery-background-color;
   padding: 48px 40px;
-  text-align: center;
+  text-align: left;
   font-size: 20px;
 
-  height: 300px;
-}
-
-.header__menu--is-open {
-  display: block;
+  &.header__menu--is-open {
+    @media screen and (max-width: 767px) {
+      display: block;
+    }
+  }
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  @media screen and (min-width: $tablet) {
+    @include centeredFlex(flex, space-between, center);
+    flex-grow: 1;
+    padding: 0;
+  }
 }

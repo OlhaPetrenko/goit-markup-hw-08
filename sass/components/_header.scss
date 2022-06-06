@@ -4,20 +4,32 @@
   border: 1px solid #ececec;
 }
 
-.header__settings {
-  // @include centeredFlex(flex, space-between, center);
-}
+// .header__settings {
+//   @include centeredFlex(flex, space-between, center);
+// }
 
 .header__nav {
   @include centeredFlex(flex, space-between, center);
 }
 
 .header__menu-button {
+  position: relative;
+  z-index: 10;
   display: inline-flex;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
+  &:hover {
+    cursor: pointer;
+  }
+
+  &:hover .header__icon--close,
+  &:focus .header__icon--close,
+  &:hover .header__icon--menu,
+  &:focus .header__icon--menu {
+    fill: $accent-color;
+  }
 
   @media screen and (min-width: $tablet) {
     display: none;
@@ -42,15 +54,18 @@
   text-align: left;
   font-size: 20px;
 
+  // overflow-y: scroll;
+
   &.header__menu--is-open {
     @media screen and (max-width: 767px) {
       display: block;
+      z-index: 2;
     }
   }
   @media screen and (max-width: 767px) {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 0;
     left: 0;
     width: 100%;
   }

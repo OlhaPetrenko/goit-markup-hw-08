@@ -37,13 +37,13 @@
   text-align: center;
 
   @media screen and (min-width: $tablet) {
-    @include centeredFlex;
+    @include centeredFlex(flex, center, baseline);
     flex-wrap: wrap;
   }
 
-  @media screen and (min-width: $desktop) {
-    @include centeredFlex(flex, center, baseline);
-  }
+  // @media screen and (min-width: $desktop) {
+  //   @include centeredFlex(flex, center, baseline);
+  // }
 }
 .footer__nav {
   @media screen and (min-width: $tablet) {

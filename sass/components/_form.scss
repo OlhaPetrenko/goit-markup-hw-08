@@ -85,14 +85,36 @@
   margin: -1px;
 }
 
+.form__checkbox-descr {
+  @media screen and (max-width: 469px) {
+    @include centeredFlex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+}
+
 .form__checkbox-text {
-  font-weight: 400;
-  line-height: 1.71;
   color: $secondary-text-color;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 1.16;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form__checkbox-link {
   color: $accent-color;
+  font-size: 12px;
+  line-height: 1.16;
+  font-weight: 400;
+
+  @media screen and (min-width: $desktop) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .form__checkbox-icon {

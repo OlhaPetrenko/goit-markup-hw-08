@@ -30,7 +30,7 @@
 
           <button
             type="button"
-            class="header__menu-button header__menu-button--is-open"
+            class="header__menu-button"
             aria-expanded="false"
             aria-controls="header__menu"
             data-menu-button
@@ -41,7 +41,7 @@
             </svg>
           </button>
 
-          <div id="header__menu" class="header__menu header__menu--is-open" data-menu>
+          <div id="header__menu" class="header__menu" data-menu>
             <ul class="site-nav list flex">
               <li class="site-nav__item">
                 <a href="./index.html" class="site-nav__link link site-nav__link--current">
@@ -543,8 +543,9 @@
               role="checkbox"
               class="form__checkbox-icon"
             ></span>
-            <span class="form__checkbox-text"
-              >Соглашаюсь с рассылкой и принимаю &nbsp;
+            <span class="form__checkbox-descr">
+              <span class="form__checkbox-text"> Соглашаюсь с рассылкой и принимаю </span>
+
               <a href="" class="form__checkbox-link">Условия договора</a></span
             >
           </label>

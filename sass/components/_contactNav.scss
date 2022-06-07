@@ -90,8 +90,9 @@
 .header-social-list {
   @extend %link;
   @extend %list;
-  @include centeredFlex;
+  @include centeredFlex(flex, flex-start, center);
   flex-wrap: wrap;
+  margin: -10px;
 
   @media screen and (min-width: $tablet) {
     display: none;
@@ -99,6 +100,7 @@
 }
 
 .header-social-list__item {
+  margin: 10px;
   &:not(:last-child) {
     margin-right: 10px;
     padding-right: 15px;

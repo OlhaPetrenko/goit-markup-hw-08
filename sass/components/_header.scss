@@ -44,10 +44,6 @@
   & .header__icon--close {
     display: block;
   }
-  // &:hover .header__icon--close,
-  // &:focus .header__icon--close {
-  //   fill: $accent-color;
-  // }
 }
 
 .header__menu-button--is-open .header__icon--menu {
@@ -63,6 +59,9 @@
   // overflow-y: scroll;
 
   &.header__menu--is-open {
+    & .header__icon--close {
+      position: fixed;
+    }
     @media screen and (max-width: 767px) {
       display: block;
       z-index: 2;

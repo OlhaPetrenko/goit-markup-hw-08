@@ -162,19 +162,57 @@
           <h2 class="section__title">Чем мы занимаемся</h2>
           <ul class="activvity-list flex list">
             <li class="activvity-list__item">
-              <img src="./images/workone.jpg" alt="Кто-то делает разметку страницы" width="370" />
+              <picture>
+                <source
+                  srcset="./images/activity/work1.jpg 1x, ./images/activity/work1-@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+
+                <img
+                  src="./images/activity/work1.jpg"
+                  alt="Кто-то делает разметку страницы"
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
+              </picture>
+
               <p class="activvity-list__text">Десктопные приложения</p>
             </li>
             <li class="activvity-list__item">
-              <img src="./images/worktwo.jpg" alt="Кто-то делает " width="370" />
+              <picture>
+                <source
+                  srcset="./images/activity/work2.jpg 1x, ./images/activity/work2-@2x.jpg 2x"
+                  type="image/jpeg"
+                />
+
+                <img
+                  src="./images/activity/work2.jpg"
+                  alt="Кто-то делает"
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
+              </picture>
+
               <p class="activvity-list__text">Мобильные приложения</p>
             </li>
             <li class="activvity-list__item">
-              <img
-                src="./images/workthree.jpg"
-                alt="Кто-то занимается подбором цвета"
-                width="370"
-              />
+              <picture>
+                <source
+                  srcset="./images/activity/work3.jpg 1x, ./images/activity/work3-@2x.jpg 2x"
+                  type="image/jpg"
+                />
+
+                <img
+                  src="./images/activity/work3.jpg"
+                  alt="Кто-то занимается подбором цвета "
+                  width="370"
+                  height="294"
+                  loading="lazy"
+                />
+              </picture>
+
               <p class="activvity-list__text">Дизайнерские решения</p>
             </li>
           </ul>
@@ -188,7 +226,33 @@
           <ul class="team-list flex list">
             <li class="team-list__item">
               <div class="team-member">
-                <img src="./images/teamone.jpg" alt="Фото сотрудника" width="270" />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/team/team1_lg.jpg 1x, ./images/team/team1_lg@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/team/team1_md.jpg 1x, ./images/team/team1_md@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/team/team1_sm.jpg, ./images/team/team1_sm@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/team/team1_sm.jpg"
+                    alt="Фото сотрудника"
+                    width="450"
+                    height="622"
+                    loading="lazy"
+                  />
+                </picture>
+
                 <div class="team-member__descr">
                   <h3 class="team-member__title">Игорь Демьяненко</h3>
                   <p class="team-member__text" lang="en">Product Designer</p>
@@ -228,7 +292,32 @@
 
             <li class="team-list__item">
               <div class="team-member">
-                <img src="./images/teamtwo.jpg" alt="Фото сотрудника" width="270" />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/team/team2_lg.jpg 1x, ./images/team/team2_lg@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/team/team2_md.jpg 1x, ./images/team/team2_md@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/team/team2_sm.jpg, ./images/team/team2_sm@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/team/team2_sm.jpg"
+                    alt="Фото сотрудника"
+                    width="450"
+                    height="622"
+                    loading="lazy"
+                  />
+                </picture>
                 <div class="team-member__descr">
                   <h3 class="team-member__title">Ольга Репина</h3>
                   <p class="team-member__text" lang="en">Frontend Develope</p>
@@ -268,7 +357,32 @@
 
             <li class="team-list__item">
               <div class="team-member">
-                <img src="./images/teamthree.jpg" alt="Фото сотрудника" width="270" />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/team/team3_lg.jpg 1x, ./images/team/team3_lg@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/team/team3_md.jpg 1x, ./images/team/team3_md@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/team/team3_sm.jpg, ./images/team/team3_sm@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/team/team3_sm.jpg"
+                    alt="Фото сотрудника"
+                    width="450"
+                    height="622"
+                    loading="lazy"
+                  />
+                </picture>
                 <div class="team-member__descr">
                   <h3 class="team-member__title">Николай Тарасов</h3>
                   <p class="team-member__text" lang="en">Marketing</p>
@@ -308,7 +422,32 @@
 
             <li class="team-list__item">
               <div class="team-member">
-                <img src="./images/teamfour.jpg" alt="Фото сотрудника" width="270" />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="./images/team/team4_lg.jpg 1x, ./images/team/team4_lg@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="./images/team/team4_md.jpg 1x, ./images/team/team4_md@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="./images/team/team4_sm.jpg, ./images/team/team4_sm@2x.jpg 2x"
+                    type="image/jpg"
+                  />
+                  <img
+                    src="./images/team/team4_sm.jpg"
+                    alt="Фото сотрудника"
+                    width="450"
+                    height="622"
+                    loading="lazy"
+                  />
+                </picture>
                 <div class="team-member__descr">
                   <h3 class="team-member__title">Михаил Ермаков</h3>
                   <p class="team-member__text" lang="en">UI Designer</p>

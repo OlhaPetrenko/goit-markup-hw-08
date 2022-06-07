@@ -48,7 +48,10 @@
 
 // Експеримент
 .section--feature {
-  padding-bottom: 0;
+  padding-bottom: 60px;
+  @media screen and (min-width: $desktop) {
+    padding-bottom: 0;
+  }
 }
 
 .section__title--hidden {

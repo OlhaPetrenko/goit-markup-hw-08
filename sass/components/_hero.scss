@@ -5,8 +5,35 @@
   max-width: 1600px;
   margin-left: auto;
   margin-right: auto;
+
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url(../images/bg-picture.jpg);
+    url(../images/hero/bg_sm.jpg);
+
+  @include mq(retina) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/bg_sm@2x.jpg);
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/bg_md.jpg);
+
+    @include mq(retina) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/bg_md@2x.jpg);
+    }
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url(../images/hero/bg_lg.jpg);
+
+    @include mq(retina) {
+      background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+        url(../images/hero/bg_lg@2x.jpg);
+    }
+  }
+
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

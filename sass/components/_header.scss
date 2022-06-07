@@ -24,10 +24,10 @@
     cursor: pointer;
   }
 
-  &:hover .header__icon--close,
-  &:focus .header__icon--close,
   &:hover .header__icon--menu,
-  &:focus .header__icon--menu {
+  &:focus .header__icon--menu,
+  &:hover .header__icon--close,
+  &:focus .header__icon--close {
     fill: $accent-color;
   }
 
@@ -40,8 +40,14 @@
   display: none;
 }
 
-.header__menu-button--is-open .header__icon--close {
-  display: block;
+.header__menu-button--is-open {
+  & .header__icon--close {
+    display: block;
+  }
+  // &:hover .header__icon--close,
+  // &:focus .header__icon--close {
+  //   fill: $accent-color;
+  // }
 }
 
 .header__menu-button--is-open .header__icon--menu {
@@ -64,10 +70,11 @@
   }
   @media screen and (max-width: 767px) {
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
+    height: 100%;
   }
   @media screen and (min-width: $tablet) {
     @include centeredFlex(flex, space-between, center);

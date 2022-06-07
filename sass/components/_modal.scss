@@ -110,6 +110,9 @@
   transform: translate(-50%, -50%) scale(1);
 
   transition: transform 500ms $timing-function;
+  @media screen and (max-width: 767px) {
+    width: 95%;
+  }
 
   @media screen and (min-width: $desktop) {
     max-width: 528px;

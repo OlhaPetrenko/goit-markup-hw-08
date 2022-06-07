@@ -3,3 +3,11 @@
   justify-content: $justifyCont;
   align-items: $alingItem;
 }
+
+@mixin mq($type) {
+  @if $type == 'retina' {
+    @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+      @content;
+    }
+  }
+}

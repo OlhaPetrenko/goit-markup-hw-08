@@ -64,12 +64,19 @@
 
     color: rgba(117, 117, 117, 0.5);
   }
+  @media screen and (max-width: 479px) {
+    min-height: 100px;
+  }
 }
 
 .form__agreement {
   @include centeredFlex;
   flex-direction: row;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
+
+  @media screen and (min-width: $mobile) {
+    margin-bottom: 30px;
+  }
 }
 
 .form__checkbox {
@@ -86,7 +93,7 @@
 }
 
 .form__checkbox-descr {
-  @media screen and (max-width: 469px) {
+  @media screen and (max-width: 479px) {
     @include centeredFlex;
     flex-wrap: wrap;
     text-align: center;
@@ -119,6 +126,7 @@
 
 .form__checkbox-icon {
   display: inline-block;
+  flex-shrink: 0;
   width: 16px;
   height: 15px;
   margin-right: 8px;
@@ -143,6 +151,7 @@
 
 .form__button {
   @extend %button;
+
   display: block;
   margin-right: auto;
   margin-left: auto;

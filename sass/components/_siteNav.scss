@@ -1,8 +1,12 @@
 .site-nav {
   @extend %list;
-  @media screen and (max-width: 767px) {
-    margin-bottom: 302px;
-  }
+  // @media screen and (min-width: $mobile) and (max-width: 767px) {
+  //   margin-bottom: 302px;
+  // }
+  // @media screen and (min-width: 320px) and (max-width: 479px) {
+  //   margin-bottom: 125px;
+  // }
+
   @media screen and (min-width: $tablet) {
     @include centeredFlex;
     padding-top: 32px;
@@ -24,17 +28,20 @@
 
   .site-nav__link {
     @extend %link;
-    @media screen and (max-width: 767px) {
-      font-size: 40px;
-      line-height: 1.18;
-    }
-
     color: $primary-text-color;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     transition: color 250ms $timing-function;
+
+    @media screen and (min-width: $mobile) and (max-width: 767px) {
+      font-size: 40px;
+      line-height: 1.18;
+    }
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+      font-size: 28px;
+    }
 
     @media screen and (min-width: $tablet) {
       padding-top: 32px;

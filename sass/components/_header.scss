@@ -39,6 +39,11 @@
 .header__icon--close {
   display: none;
 }
+.header__menu-button.header__menu-button--is-open {
+  position: fixed;
+  top: 7px;
+  right: 15px;
+}
 
 .header__menu-button--is-open {
   & .header__icon--close {
@@ -55,15 +60,18 @@
   padding: 48px 40px;
   text-align: left;
   font-size: 20px;
-
-  // overflow-y: scroll;
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+    padding: 48px 40px;
+  }
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    padding: 38px 32px;
+  }
 
   &.header__menu--is-open {
-    & .header__icon--close {
-      position: fixed;
-    }
     @media screen and (max-width: 767px) {
-      display: block;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
       z-index: 2;
     }
   }

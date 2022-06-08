@@ -1,6 +1,6 @@
 .filter {
   @extend %list;
-  @include centeredFlex;
+  @include centeredFlex(flex, flex-start, center);
   flex-wrap: wrap;
 
   @media screen and (max-width: 767px) {

@@ -31,7 +31,8 @@
   padding: 40px;
   width: 100%;
   max-width: 450px;
-  min-height: 581px;
+
+  min-height: 400px;
   background-color: $primery-background-color;
   transform: translate(-50%, -50%) scale(1);
 
@@ -43,15 +44,25 @@
   @media screen and (min-width: $desktop) {
     max-width: 528px;
   }
+  @media screen and (max-width: 479px) {
+    min-height: 400px;
+    padding: 20px;
+  }
 }
 
 .modal__title {
   margin-top: 0;
   margin-bottom: 12px;
   font-weight: 700;
-  font-size: 20px;
+
   line-height: 23px;
   text-align: center;
+  @media screen and (min-width: $mobile) and (max-width: 767px) {
+    font-size: 20px;
+  }
+  @media screen and (min-width: 320px) and (max-width: 479px) {
+    font-size: 14px;
+  }
 }
 
 .modal__button {
@@ -67,6 +78,7 @@
   background-color: $primery-background-color;
   fill: #000000;
   cursor: pointer;
+
   &:hover,
   &:focus {
     outline: transparent;

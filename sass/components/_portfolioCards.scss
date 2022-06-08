@@ -59,7 +59,7 @@
   transition: transform 250ms $timing-function;
   opacity: 1;
 
-  @media screen and (max-width: 679px) {
+  @media screen and (max-width: 479px) {
     padding: 24px 14px;
     font-size: 15px;
     line-height: 1.26;

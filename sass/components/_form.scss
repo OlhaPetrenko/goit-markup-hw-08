@@ -126,6 +126,7 @@
 }
 
 .form__checkbox:checked + .form__checkbox-icon {
+  flex-shrink: 0;
   border: transparent;
   background-image: url(/images/icons/icon-check.svg);
   background-size: cover;

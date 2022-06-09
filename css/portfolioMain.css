@@ -568,7 +568,7 @@ img {
 }
 
 @media screen and (max-width: 767px) {
-  .card-set__item {
+  .card-set__item:not(:last-child) {
     margin-bottom: 30px;
   }
 }
@@ -643,6 +643,18 @@ img {
 }
 
 .card-set__item:hover .example__overlay {
+  transform: translateY(0%);
+}
+
+.card-set__item:focus .example__overlay {
+  transform: translateY(0%);
+}
+
+.example:hover .example__overlay {
+  transform: translateY(0%);
+}
+
+.example:focus .example__overlay {
   transform: translateY(0%);
 }
 

@@ -21,9 +21,10 @@
   // }
 }
 .footer__nav {
+  margin-bottom: 60px;
+
   @media screen and (min-width: $tablet) {
     margin-right: 165px;
-    margin-bottom: 60px;
   }
 
   @media screen and (min-width: $desktop) {

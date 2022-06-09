@@ -1,12 +1,8 @@
 .header {
   position: relative;
 
-  border: 1px solid #ececec;
+  border-bottom: 1px solid #ececec;
 }
-
-// .header__settings {
-//   @include centeredFlex(flex, space-between, center);
-// }
 
 .header__nav {
   @include centeredFlex(flex, space-between, center);

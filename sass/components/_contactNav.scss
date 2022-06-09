@@ -31,7 +31,7 @@
 
   color: $secondary-text-color;
   font-weight: 500;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
   transition: color 250ms $timing-function;
@@ -43,10 +43,6 @@
     font-size: 18px;
     line-height: 1.17;
   }
-  // @media screen and (max-width: 767px) {
-  //   font-size: 24px;
-  //   line-height: 1.17;
-  // }
 
   &:hover,
   &:focus {
@@ -55,11 +51,13 @@
 
   @media screen and (min-width: $tablet) {
     @include centeredFlex(flex, left, center);
+    font-size: 12px;
   }
 
   @media screen and (min-width: $desktop) {
     padding-top: 32px;
     padding-bottom: 32px;
+    font-size: 14px;
   }
 }
 
@@ -127,6 +125,7 @@
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: $accent-color;
+
   @media screen and (min-width: $mobile) and (max-width: 767px) {
     font-size: 18px;
   }

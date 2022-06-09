@@ -136,14 +136,14 @@
 .form__checkbox:checked + .form__checkbox-icon {
   flex-shrink: 0;
   border: transparent;
-  background-image: url(/images/icons/icon-check.svg);
+  background-image: url(../images/icons/icon-check.svg);
   background-size: cover;
   background-repeat: no-repeat;
 }
-
-.form__checkbox-icon:focus {
+.svg .form__checkbox-icon:focus {
   border: transparent;
-  background-image: url(/images/icons/icon-check.svg);
+
+  background-image: url(../images/icons/icon-check.svg);
   outline: transparent;
   background-size: cover;
   background-repeat: no-repeat;
